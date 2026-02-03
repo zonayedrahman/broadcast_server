@@ -30,7 +30,7 @@ class BroadcastClient:
     def send_loop(self):
         try:
             while self.running:
-                message = input()
+                message = input('Enter message to broadcast: ')
                 if not message:
                     continue
 

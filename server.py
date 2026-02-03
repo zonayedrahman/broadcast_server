@@ -11,15 +11,12 @@ class BroadcastServer:
         self.server_socket = None
         self.clients = []
         self.clients_lock = threading.Lock()
-
-
-        
     
     def start(self):
         '''Start the broadcast server, and start listening for connections'''
 
         self.server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        # rebinding to same port if reconnecting
+        # rebinding to the same port if reconnecting
         self.server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR, 1)
 
         self.server_socket.bind((self.host, self.port))

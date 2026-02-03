@@ -13,14 +13,6 @@ class ServerCLI(cmd.Cmd):
         broadcast_server = BroadcastServer()
         broadcast_server.start()
 
-        
-        
-
-
-    def do_connect(self, arg):
-        'connect: Connects to the Broadcast Server'
-        print('connecting here')
-
     def do_bye(self, arg):
         'bye: Exits the CLI'
         print('Closing....')
